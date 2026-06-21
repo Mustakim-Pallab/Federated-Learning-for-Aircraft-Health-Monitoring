@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+data/raw/
+experiments/logs/
+.idea
+Project for PhD Applicants.pdf
+colab_task1_baseline.py
