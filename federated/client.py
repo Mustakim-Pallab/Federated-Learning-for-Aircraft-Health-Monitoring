@@ -28,9 +28,17 @@ def multitask_loss(
     rul_true: torch.Tensor,
     fault_true: torch.Tensor,
     fault_loss_weight: float,
+    fault_pos_weight: float | None = None,
 ) -> torch.Tensor:
     mse = nn.functional.mse_loss(rul_pred, rul_true)
-    bce = nn.functional.binary_cross_entropy_with_logits(fault_logit, fault_true)
+    pos_weight = None
+    if fault_pos_weight is not None:
+        pos_weight = torch.tensor(fault_pos_weight, dtype=fault_logit.dtype, device=fault_logit.device)
+    bce = nn.functional.binary_cross_entropy_with_logits(
+        fault_logit,
+        fault_true,
+        pos_weight=pos_weight,
+    )
     return mse + fault_loss_weight * bce
 
 
@@ -42,6 +50,7 @@ def train_model(
     learning_rate: float,
     fault_loss_weight: float,
     device: torch.device,
+    fault_pos_weight: float | None = None,
 ) -> float:
     if len(data) == 0:
         return float("nan")
@@ -60,7 +69,14 @@ def train_model(
             fault = fault.to(device)
             optimizer.zero_grad()
             rul_pred, fault_logit = model(x)
-            loss = multitask_loss(rul_pred, fault_logit, rul, fault, fault_loss_weight)
+            loss = multitask_loss(
+                rul_pred,
+                fault_logit,
+                rul,
+                fault,
+                fault_loss_weight,
+                fault_pos_weight=fault_pos_weight,
+            )
             loss.backward()
             optimizer.step()
             total_loss += float(loss.item()) * x.shape[0]

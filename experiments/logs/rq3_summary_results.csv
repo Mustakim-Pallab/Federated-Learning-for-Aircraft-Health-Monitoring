@@ -1,0 +1,2 @@
+experiment,attribution_method,explained_windows,test_rmse,test_mae,test_nasa_score,test_auroc,test_auprc,test_precision,test_recall,test_f1,test_tn,test_fp,test_fn,test_tp
+rq3_interpretability,input_gradient,128,14.124131977788107,10.107791900634766,52427.295281233404,0.9966099189947137,0.9117614940335391,0.9306122448979591,0.6867469879518072,0.7902946273830156,9847,17,104,228

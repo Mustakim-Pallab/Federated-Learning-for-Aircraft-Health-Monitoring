@@ -1,0 +1,57 @@
+seed: 42
+device: auto
+
+dataset:
+  name: FD001
+  data_dir: data/raw/CMAPSSData
+  url: https://phm-datasets.s3.amazonaws.com/NASA/6.+Turbofan+Engine+Degradation+Simulation+Data+Set.zip
+  download: false
+  sensors:
+    - s2
+    - s3
+    - s4
+    - s7
+    - s8
+    - s9
+    - s11
+    - s12
+    - s13
+    - s14
+    - s15
+    - s17
+    - s20
+    - s21
+  rul_cap: 125
+  fault_threshold: 30
+  window_size: 30
+  stride: 1
+  validation_engine_fraction: 0.2
+
+federated:
+  num_clients: 5
+  partition_strategy: ordered
+  rounds: 30
+  local_epochs: 1
+  batch_size: 128
+  learning_rate: 0.001
+  fault_loss_weight: 1.0
+
+rq2:
+  fault_boost: 2.0
+  min_fault_weight: 0.05
+  max_pos_weight: 20.0
+  include_smote: true
+  smote_target_fault_ratio: 0.35
+  smote_k_neighbors: 5
+  kmeans_smote_clusters: 4
+
+model:
+  conv_channels:
+    - 64
+    - 128
+  kernel_size: 3
+  gru_hidden: 128
+  dropout: 0.2
+
+outputs:
+  results_dir: experiments/logs

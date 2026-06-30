@@ -45,6 +45,7 @@ def run_centralized(
     metrics = evaluate_model(model, test_data, cfg["batch_size"], device)
     row = {
         "experiment": "centralized",
+        "client_id": "global",
         "num_train_windows": len(train_data),
         "train_loss": train_loss,
     }

@@ -1,0 +1,2 @@
+experiment,summary_type,num_common_sensors,common_sensors,rmse,mae,nasa_score,auroc,auprc,precision,recall,f1,tn,fp,fn,tp
+rq1_variable_sensor_adapter,client_macro_mean,not_applicable,client_specific,21.623575332648446,16.619902038574217,286235.5691831262,0.980158346280499,0.634070471314477,0.658255454444125,0.536144578313253,0.48207561993892944,9710.0,154.0,154.0,178.0

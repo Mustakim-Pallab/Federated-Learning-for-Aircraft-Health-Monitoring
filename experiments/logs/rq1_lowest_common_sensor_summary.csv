@@ -1,0 +1,2 @@
+experiment,summary_type,num_common_sensors,common_sensors,rmse,mae,nasa_score,auroc,auprc,precision,recall,f1,tn,fp,fn,tp
+rq1_lowest_common_sensors,single_global_model,2,s11 s15,19.05244996343974,14.585134506225586,97171.61681756668,0.9892944649644808,0.8187488374872292,0.729483282674772,0.7228915662650602,0.7261724659606656,9775,89,92,240

@@ -64,7 +64,7 @@ def main() -> None:
         summary_frames.append(run_centralized(model, prepared["clients"], prepared["test"], config, device))
 
     if args.mode in {"all", "federated"}:
-        fed_model, _ = run_federated(
+        fed_model, fed_rounds = run_federated(
             model,
             prepared["clients"],
             prepared["validation"],
@@ -78,7 +78,12 @@ def main() -> None:
             config["federated"]["batch_size"],
             device,
         )
-        fed_row = {"experiment": "federated_best"}
+        fed_row = {
+            "experiment": "federated_best",
+            "client_id": "global",
+            "num_train_windows": sum(len(client["train"]) for client in prepared["clients"].values()),
+            "train_loss": float(fed_rounds["train_loss"].iloc[-1]) if not fed_rounds.empty else float("nan"),
+        }
         fed_row.update(fed_metrics)
         summary_frames.append(pd.DataFrame([fed_row]))
 

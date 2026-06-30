@@ -1,0 +1,6 @@
+client_id,num_sensors,sensors,num_train_windows
+0,14,s2 s3 s4 s7 s8 s9 s11 s12 s13 s14 s15 s17 s20 s21,2650
+1,10,s2 s3 s4 s7 s11 s12 s15 s17 s20 s21,2939
+2,6,s2 s4 s7 s11 s15 s20,2788
+3,10,s3 s4 s8 s9 s11 s13 s14 s15 s17 s21,3086
+4,7,s2 s7 s11 s12 s15 s20 s21,2559

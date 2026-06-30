@@ -1,0 +1,29 @@
+target,sensor,subsystem,likely_fault_mode,maintenance_action,mean_abs_input_gradient,normalized_importance,rank
+fault,s12,bypass and flow path,bypass ratio or flow instability,inspect bypass flow and related instrumentation,0.06489251790844719,0.14550129579256496,1.0
+fault,s11,bypass and flow path,bypass pressure or flow-path degradation,inspect bypass duct pressure behavior,0.05738998776359949,0.12867920454102455,2.0
+fault,s2,thermal core,abnormal core temperature trend,inspect temperature instrumentation and hot-section condition,0.05471811124152737,0.12268835214864696,3.0
+fault,s13,spool speed control,corrected fan-speed deviation,inspect speed-control response and operating point,0.03389471740229055,0.07599836562843718,4.0
+fault,s7,compressor flow path,pressure-ratio degradation,inspect compressor flow path and pressure sensors,0.033061910420656204,0.07413105489865705,5.0
+fault,s9,high-pressure spool,high-spool speed anomaly,inspect high-pressure spool dynamics,0.030511467724863905,0.0684124801069374,6.0
+fault,s14,spool speed control,corrected core-speed deviation,inspect core-speed response and controller behavior,0.028612093779884162,0.06415372456628957,7.0
+fault,s4,thermal core,elevated turbine temperature signature,inspect turbine gas path and cooling effectiveness,0.025959780603443505,0.05820673689408561,8.0
+fault,s15,engine efficiency,efficiency degradation signature,review performance deterioration and schedule detailed inspection,0.025092492549447343,0.05626211307998289,9.0
+fault,s21,fuel and actuator response,fuel-flow or actuator response anomaly,inspect fuel metering and actuator response,0.024786152756860247,0.055575241338665454,10.0
+fault,s8,fan and low-pressure compressor,fan-speed or low-spool operating anomaly,inspect fan/LPC operating margins,0.02135787976294523,0.04788840502805962,11.0
+fault,s20,fuel and actuator response,fuel-flow or actuator response anomaly,inspect fuel metering and actuator response,0.01796789014406386,0.04028740728335081,12.0
+fault,s17,bleed and cooling control,bleed/cooling control deviation,inspect bleed and cooling control actuation,0.014004414733790327,0.03140054595289074,13.0
+fault,s3,thermal core,abnormal high-pressure compressor temperature,inspect compressor thermal margins and sensor calibration,0.01374329794634832,0.03081507274040721,14.0
+rul,s12,bypass and flow path,bypass ratio or flow instability,inspect bypass flow and related instrumentation,0.3470829918514937,0.14448319636269435,1.0
+rul,s11,bypass and flow path,bypass pressure or flow-path degradation,inspect bypass duct pressure behavior,0.30719380496884696,0.12787818443062132,2.0
+rul,s2,thermal core,abnormal core temperature trend,inspect temperature instrumentation and hot-section condition,0.2790519176633097,0.11616332105488297,3.0
+rul,s13,spool speed control,corrected fan-speed deviation,inspect speed-control response and operating point,0.1963226486259373,0.08172490285551706,4.0
+rul,s7,compressor flow path,pressure-ratio degradation,inspect compressor flow path and pressure sensors,0.18771660286438419,0.07814239080835562,5.0
+rul,s9,high-pressure spool,high-spool speed anomaly,inspect high-pressure spool dynamics,0.14917806153243873,0.062099623615724825,6.0
+rul,s14,spool speed control,corrected core-speed deviation,inspect core-speed response and controller behavior,0.1415218438996817,0.0589125046222869,7.0
+rul,s21,fuel and actuator response,fuel-flow or actuator response anomaly,inspect fuel metering and actuator response,0.1403036107076332,0.058405380304372735,8.0
+rul,s8,fan and low-pressure compressor,fan-speed or low-spool operating anomaly,inspect fan/LPC operating margins,0.13962536593317054,0.05812304156916733,9.0
+rul,s15,engine efficiency,efficiency degradation signature,review performance deterioration and schedule detailed inspection,0.13396011790609919,0.0557647204691552,10.0
+rul,s4,thermal core,elevated turbine temperature signature,inspect turbine gas path and cooling effectiveness,0.12826264889736194,0.053392986466378224,11.0
+rul,s20,fuel and actuator response,fuel-flow or actuator response anomaly,inspect fuel metering and actuator response,0.09822737207286991,0.040889945691917735,12.0
+rul,s3,thermal core,abnormal high-pressure compressor temperature,inspect compressor thermal margins and sensor calibration,0.07927944562106859,0.03300233079152278,13.0
+rul,s17,bleed and cooling control,bleed/cooling control deviation,inspect bleed and cooling control actuation,0.07451134035363793,0.031017470957402923,14.0
